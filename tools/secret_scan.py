@@ -94,14 +94,28 @@ def machine_values(data_dir: Path | None = None) -> dict[str, str]:
     host = socket.gethostname()
     if len(host) >= 4:
         found[host] = "this machine's hostname"
-    try:
-        email = subprocess.run(["git", "config", "user.email"], capture_output=True,
-                               text=True, timeout=5).stdout.strip()
-    except (OSError, subprocess.SubprocessError):
-        email = ""
-    if email and "noreply" not in email:
+    for email in private_emails():
         found[email] = "your git email"
     return found
+
+
+def private_emails() -> set[str]:
+    """Every address git is configured with here, except a GitHub noreply one:
+    a commit that carries one publishes it."""
+    try:
+        out = subprocess.run(["git", "config", "--get-all", "user.email"],
+                             capture_output=True, text=True, timeout=5).stdout
+        out += subprocess.run(["git", "config", "--global", "--get-all", "user.email"],
+                              capture_output=True, text=True, timeout=5).stdout
+    except (OSError, subprocess.SubprocessError):
+        return set()
+    return {e.strip() for e in out.splitlines() if e.strip() and "noreply" not in e}
+
+
+def identity_problems(emails: list[str], private: set[str]) -> list[str]:
+    """Commits whose author or committer is one of the user's private addresses."""
+    return sorted({f"a commit is authored by your private address {e}: use your GitHub noreply address"
+                   for e in emails if e in private})
 
 
 def _refused(path: str) -> bool:
@@ -150,6 +164,13 @@ def main(argv: list[str]) -> int:
         diff = _git("diff", "--cached", "--unified=0", "--no-color")
         changed = _git("diff", "--cached", "--name-only", "--diff-filter=AM").split("\n")
     problems = scan(diff, machine_values(), [c for c in changed if c])
+    private = private_emails()
+    if len(argv) >= 2 and argv[0] == "--range":
+        who = _git("log", "--format=%ae%n%ce", argv[1]).split("\n")
+    else:
+        who = [ident.split("<")[-1].rstrip(">") for ident in
+               (_git("var", "GIT_AUTHOR_IDENT"), _git("var", "GIT_COMMITTER_IDENT")) if ident]
+    problems += identity_problems([w.strip() for w in who if w.strip()], private)
     if not problems:
         return 0
     print("Blocked: this would publish something private.\n", file=sys.stderr)
