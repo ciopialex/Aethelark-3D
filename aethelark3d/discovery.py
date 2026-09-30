@@ -318,7 +318,7 @@ def _suggest_name(brand: str, mac: str, ip: str) -> str:
 
     A probed printer gives up no model and no user-set name without a
     credential, and `Device.label` falls back to the mainboard id — so the
-    eagle would announce "elegoolink:88:49:2d:75:26:b5". Brand plus the tail of
+    eagle would announce "elegoolink:aa:bb:cc:dd:ee:ff". Brand plus the tail of
     the MAC is short, stable across DHCP, and distinguishes two of the same
     brand without inventing a model number nobody told us.
     """
@@ -454,7 +454,7 @@ def probe_host(ip: str, timeout: float = 0.6) -> Optional[Device]:
             ip=ip, brand=probe["brand"], protocol=probe["family"],
             machine=machine, firmware=firmware,
             # Something a person can be told. `label` falls back to the
-            # mainboard id, and "I found elegoolink:88:49:2d:75:26:b5" is not
+            # mainboard id, and "I found elegoolink:aa:bb:cc:dd:ee:ff" is not
             # a sentence anyone wants read out loud. The MAC tail
             # distinguishes two of the same brand without naming a model we
             # were never told.
