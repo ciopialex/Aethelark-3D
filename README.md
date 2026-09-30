@@ -161,3 +161,23 @@ The line that used to follow this said `60 passed ... 100% pass rate, 85%
 coverage`. On 2026-09-10 the suite was 347 tests in 37 files. The number was
 true when written and the work carried on; it is not replaced with a fresher
 one, because a fresher one rots on the same schedule. Run the command.
+
+
+## License
+
+**Source-available, noncommercial.** [PolyForm Noncommercial 1.0.0](LICENSE).
+
+This is not an open-source licence: the source is published so you can read,
+audit and learn from it, not so it can be resold.
+
+- **Personal use, research, study, hobby projects** — permitted.
+- **Charities, schools, public research, government** — permitted.
+- **Any commercial use** — *not* granted here. That includes running it inside
+  a business, or building a product or service on it. Contact the copyright
+  holder for a commercial licence.
+- **Attribution travels with the code.** If you pass on any part of it, you
+  must pass on these terms and the `Required Notice` line with them. You may
+  not present this work as your own.
+
+Copyright (c) 2025-2026 Alexandru-Mihai Cioponea (shennyonthebeat). All rights
+not expressly granted are reserved.
