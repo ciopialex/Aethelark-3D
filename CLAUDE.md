@@ -1,6 +1,6 @@
 # Working in Aethelark-3D
 
-This is a module, not the harness. The harness is `~/Projects/Space-Eagle`;
+This is a module, not the harness. The harness is [Aethelark](https://github.com/ciopialex/Project-Space-Eagle);
 its `CLAUDE.md` governs how the two fit together, and
 `Space-Eagle/docs/MODULE_CONTRACT.md` is the contract this module is built to.
 Do not keep a second copy of that contract here — one used to live in
