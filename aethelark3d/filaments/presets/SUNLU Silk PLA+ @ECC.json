@@ -1,0 +1,58 @@
+{
+    "type": "filament",
+    "name": "SUNLU Silk PLA+ @ECC",
+    "inherits": "Elegoo PLA @base",
+    "from": "system",
+    "setting_id": "SUNLU_SILK_ECC",
+    "instantiation": "true",
+    "nozzle_temperature_initial_layer": [
+        "225"
+    ],
+    "nozzle_temperature": [
+        "220"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "60"
+    ],
+    "hot_plate_temp": [
+        "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "60"
+    ],
+    "textured_plate_temp": [
+        "60"
+    ],
+    "fan_max_speed": [
+        "70"
+    ],
+    "fan_min_speed": [
+        "50"
+    ],
+    "fan_cooling_layer_time": [
+        "60"
+    ],
+    "filament_max_volumetric_speed": [
+        "14.0"
+    ],
+    "flow_ratio": [
+        "1.0"
+    ],
+    "enable_pressure_advance": [
+        "1"
+    ],
+    "pressure_advance": [
+        "0.036"
+    ],
+    "filament_vendor": [
+        "SUNLU"
+    ],
+    "filament_type": [
+        "PLA"
+    ],
+    "compatible_printers": [
+        "Elegoo Centauri Carbon 0.4 nozzle",
+        "Elegoo Centauri Carbon 0.6 nozzle",
+        "Elegoo Centauri Carbon 0.8 nozzle"
+    ]
+}

@@ -1,0 +1,89 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Pytest / Cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local Environment & Sliced Staging
+Downloads/
+*.gcode
+*.gcode.3mf
+*.3mf
+!tests/**/*.3mf
+
+# OS / Editor
+.DS_Store
+.vscode/
+.idea/
+
+# Internal Documentation & State
+HANDOFF.md
+ROADMAP.md
+# `docs/*` rather than `docs/`: git does not descend into an excluded
+# directory, so the negations below would never be reached.
+#
+# These describe the module rather than the operator, and a module contract
+# that cannot travel with the code it describes is not a contract, it is a note.
+docs/*
+!docs/MODULE_FACTORY_SPEC.md
+!docs/UI_STATES.md
+!docs/WORK_BRIEF.md
+!docs/PURGEX_SCIENTIFIC_FOUNDATIONS.md
+!docs/BIBLIOGRAPHY.md
+!docs/OPUS_MISSION_BRIEFING.md
+!docs/DYNAMIC_ISLAND_3TIER_BLUEPRINT.md
+*.bak
+
+# Rewrite/factory planning notes — internal, not part of the module.
+NON_DERIVATIVE_ROADMAP.txt
+Module_Software_Factory.txt
+
+# --- Never tracked: secrets and private data ---------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+id_rsa*
+*.bak
+*.tmp
+*.log
+config/api_keys.json
+*token*.json
+credentials*.json
+secrets*.json
+memory/long_term*
+screenshot*.png
+*.sqlite
+*.db
+uploads/

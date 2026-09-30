@@ -1,0 +1,6 @@
+# The module socket (manifest + island cards) and the filament presets are data
+# the wheel must carry, so `pip install git+... && a3d register` works on a
+# machine that has never seen the module. Kept in step with setup.py's
+# package_data. Verified by building the wheel and listing it.
+recursive-include aethelark3d/module *
+recursive-include aethelark3d/filaments/presets *.json

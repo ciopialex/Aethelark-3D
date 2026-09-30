@@ -1,0 +1,35 @@
+Aethelark — Source-Available License (Personal Use)
+
+Required Notice: Copyright (c) 2025-2026 Alexandru-Mihai Cioponea
+(shennyonthebeat). All rights reserved except as granted below.
+
+This source code is publicly readable. It is source-available, not open source.
+
+You MAY, free of charge:
+  - download, install and run this software on your own devices, for your own
+    personal, non-commercial use
+  - read the source code and study how it works
+  - modify your own copy for your own personal, non-commercial use
+  - fork it on the hosting platform for the purpose of submitting a
+    contribution back to this project
+
+You may NOT, without prior written permission from the copyright holder:
+  - redistribute, publish, sublicense, sell or rent this software, or any copy
+    or modified version of it
+  - use it for any commercial purpose, or offer it or a modified version of it
+    as a hosted or managed service
+  - incorporate it into another product
+  - use it to train a machine-learning model
+
+Contributions you submit to this project may be included under these terms.
+
+Third-party dependencies keep their own licences. This notice covers only the
+source in this repository.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
