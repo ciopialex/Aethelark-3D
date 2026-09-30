@@ -11,7 +11,7 @@ stopping a print always asks you first.
 
 ## Install
 
-Say you have a 3D printer during Aethelark's setup, or add it later in
+Tick it on Aethelark's first-run screen, or add it later in
 **Settings → Modules → Get**, or from a terminal:
 
 ```bash
